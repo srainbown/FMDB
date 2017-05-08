@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  FMDB的使用
+//
+//  Created by 李自杨 on 17/2/15.
+//  Copyright © 2017年 View. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <AFNetworking.h>
+#import <Masonry.h>
+#import <FMDB.h>
+#import <NSImage+WebCache.h>
+
+
+
+#import "LZYButton.h"
+#import "LZYLabel.h"
+#import "LZYTextField.h"
+#import "DBDataBaseManager.h"
+
+#define KWidth [UIScreen mainScreen].bounds.size.width
+#define KHeight [UIScreen mainScreen].bounds.size.height
+
+#define presonTable @"homeTable"
+
+#endif /* PrefixHeader_pch */
