@@ -110,30 +110,8 @@
     }];
     _nameTextField.placeholder = @"请输入您的昵称";
     
-    //UIButton
-    _nameDecideBtn = [[LZYButton alloc]init];
-    [self.view addSubview:_nameDecideBtn];
-    [_nameDecideBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.view).offset(74);
-        make.left.mas_equalTo(_nameTextField.mas_right).offset(10);
-        make.right.mas_equalTo(self.view.mas_right).offset(-10);
-        make.height.mas_equalTo(_nameTextField.mas_height);
-    }];
-    [_nameDecideBtn setTitle:@"Data" forState:UIControlStateNormal];
-    [_nameDecideBtn addTarget:self action:@selector(nameOnClick) forControlEvents:UIControlEventTouchUpInside];
-    
 }
 
--(void)nameOnClick{
-    
-    if ([_nameTextField.text isEqualToString:@""]) {
-        NSLog(@"-----昵称为空-----");
-        return;
-    }
-    
-    NSLog(@"-----昵称 : %@-----",_nameTextField.text);
-    
-}
 
 #pragma mark -- 电话号码UI
 -(void)createNumber{
@@ -158,28 +136,6 @@
         make.width.mas_equalTo(@180);
     }];
     _numberTextField.placeholder = @"请输入您的电话号码";
-    
-    //UIButton
-    _numberDecideBtn = [[LZYButton alloc]init];
-    [self.view addSubview:_numberDecideBtn];
-    [_numberDecideBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(_nameDecideBtn.mas_bottom).offset(10);
-        make.left.mas_equalTo(_numberTextField.mas_right).offset(10);
-        make.right.mas_equalTo(self.view.mas_right).offset(-10);
-        make.height.mas_equalTo(_numberTextField.mas_height);
-    }];
-    [_numberDecideBtn setTitle:@"确定" forState:UIControlStateNormal];
-    [_numberDecideBtn addTarget:self action:@selector(numberOnClick) forControlEvents:UIControlEventTouchUpInside];
-    
-}
-
--(void)numberOnClick{
-    
-    if ([_numberTextField.text isEqualToString:@""]) {
-        NSLog(@"-----电话号码为空-----");
-        return;
-    }
-    NSLog(@"-----电话号码 : %@-----",_numberTextField.text);
     
 }
 
